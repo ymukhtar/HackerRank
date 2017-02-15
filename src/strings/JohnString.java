@@ -1,12 +1,6 @@
 package strings;
-
 import java.util.Scanner;
-
-/**
- * Created by yasir_mukhtar on 1/30/17.
- */
 public class JohnString {
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();
