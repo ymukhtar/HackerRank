@@ -6,22 +6,21 @@ import java.util.*;
  */
 public class AlgorithmicCrush {
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt(), m = in.nextInt();
-        long a,b,v;
-        Map<Long,Long> myRange = new HashMap<>(n);
-        for(long i=0;i<m;i++){
-            a = in.nextLong(); b = in.nextLong() ; v =in.nextLong();
-            for(long j=a-1;j<b;j++){
-                if(myRange.containsKey(j)){
-                    myRange.put(j,myRange.get(j)+v);
-                }
-                else{
-                    myRange.put(j,v);
-                }
-            }
-        }
-        System.out.println(myRange.values().stream().max(Long::compareTo).get());
-    }
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        int n = in.nextInt(), m = in.nextInt();
+//        long startTime = System.currentTimeMillis();
+//        int a,b,v;
+//        long max=Long.MIN_VALUE;
+//        Map<Integer,Integer> myRange = new TreeMap<>();
+//        for(int i=0;i<m;i++){
+//            a = in.nextInt(); b = in.nextInt()+1 ; v =in.nextInt();
+//            myRange.compute(a,(k,val)->(k==null?v:val+v));
+//            myRange.compute(b,(k,val)->(k==null?v:val+v));
+//        }
+//
+//
+//        System.out.println(max);
+//        System.out.println((System.currentTimeMillis()-startTime)/1000.0);
+//    }
 }
